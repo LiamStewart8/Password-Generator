@@ -48,4 +48,5 @@
 
 ## Author Links
 [LinkedIn](https://www.linkedin.com/in/liamsctewart/)<br>
-[Github](https://github.com/LiamStewart8)
+[Github](https://github.com/LiamStewart8)<br>
+[Deployed Link](https://liamstewart8.github.io/Password-Generator/)
