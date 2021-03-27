@@ -14,7 +14,7 @@
 
 
 ## Code Snippet
-    Here is a snippit from my Javascript where I implemented my generatePassword functioin
+    Here is a snippit from my Javascript where I implemented my generatePassword function.
 
 ```javascript
   function generatePassword() {
