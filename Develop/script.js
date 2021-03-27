@@ -1,29 +1,53 @@
 // variables for the random generator
-upperCaseLetters = "abcdefghijklmnopqrstuvwxyz" .split('');
-lowerCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split('');
-numberForPassword = "123456789" .split('');
-symbolForPassword = "!@#$%^&*" .split('');
-maxChar = 8-128;
-allVals = upperCaseLetters + lowerCaseLetters + numberForPassword + symbolForPassword + maxChar;
+var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberForPassword = "0123456789";
+var symbolForPassword = "!@#$%^&*";
+var maxChar = [8, 128];
 
 
-function generatePassword(){
-  var upperCaseLetters = window.confirm('Would you like uppercase letters?');
-  var lowerCaseLetters = window.confirm('Would you like lowercase letters?');
-  var numberForPassword = window.confirm('Would you like numbers?');
-  var symbolForPassword = window.confirm('Would you like symbols?');
-  var maxChar = window.prompt('How many characters would you like your password to be? Minimum:8 Maximum:128');
+function generatePassword() {
+  var maxChar = window.prompt('Between 8-128 how many characters would you like your password to be?');
+  if (maxChar < 8 || maxChar > 128) {
+    alert('It has to be within 8-128 characters. Try again.');
+    return '';
 
-if (symbolForPassword, lowerCaseLetters, upperCaseLetters, numberForPassword){
-  for ( i=0; i < maxChar + 1; i++){
-    tempChar = Math.floor(Math.random*(maxChar))
-    tempChar = allVals[tempChar]
-    passwordText.append(tempChar);
   }
-}
+  var allVals = '';
+  var upperCaseConfirm = window.confirm('Would you like upper case letters?');
+  if (upperCaseConfirm === true) {
+    allVals = allVals.concat(upperCaseLetters);
+  }
+  var lowerCaseConfirm = window.confirm('Would you like lower case letters?');
+  if (lowerCaseConfirm === true) {
+    allVals = allVals.concat(lowerCaseLetters);
+  }
+  var numberConfirm = window.confirm('Would you like numbers?');
+  if (numberConfirm === true) {
+    allVals = allVals.concat(numberForPassword);
+  }
+  var symbolConfirm = window.confirm('Would you like symbols?');
+  if (symbolConfirm === true) {
+    allVals = allVals.concat(symbolForPassword);
+  }
+  if (allVals === '') {
+    alert('You must select atleast one character type! Try again.');
+    return '';
+  }
+  console.log(allVals);
+
+  // Need to make password however many characters of their choice, randomly generated from allVals.
+  var generatedPassword = '';
+  for (i = 0; i < maxChar; i++) {
+    generatedPassword = generatedPassword.concat(allVals[Math.floor(Math.random() * allVals.length)]);
+
+  }
+  console.log(generatedPassword);
+  return generatedPassword;
+
 }
 
- // Assignment Code
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
