@@ -4,12 +4,12 @@
 ![Image](./assets/Passwordgen.png)
 
 ## Technologies Used
-   - Javascript - Used to make the web page interactive.
-   - Git - Version control system to track changes to source code.
-   - GitHub - Hosts repositroy that can be deployed to GitHub pages.
+    - Javascript - Used to make the web page interactive.
+    - Git - Version control system to track changes to source code.
+    - GitHub - Hosts repositroy that can be deployed to GitHub pages.
 
 ## Summary
-    Created
+    Built the functions of a random password generator that had to meet certain criteria. These functions were all made in Javascript.
 
 
 
