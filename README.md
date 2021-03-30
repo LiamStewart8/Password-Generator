@@ -1,7 +1,7 @@
 # Password-Generator
 
 ## Site-Picture
-![Image](./assets/Passwordgen.png)
+![Image](./Assets/Passwordgen.png);
 
 ## Technologies Used
     - Javascript - Used to make the web page interactive.
