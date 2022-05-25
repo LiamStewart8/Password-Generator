@@ -1,52 +1,21 @@
 # Password-Generator
+Are you in need of a quick and easy passowrd generator? Well you have come to the right place. This password generator that I have developed will generate a random password between 8 and 128 characters. This may contain **upper-case** letters, **lower-case** letters, **numbers**, and **special characters**.
 
-## Site-Picture
-![Image](./Assets/Passwordgen.png);
 
+<!-- ![Image](./Assets/Passwordgen.png) -->
+## Getting Started
+Visit the live link [Here](https://liamstewartdev.github.io/Password-Generator/) and click "Generate Password" to begin the prompt. From there it will ask a few questions before generating your password:<br>
+1. Between 8-128 how many characters would you like your password to be?
+2. Would you like **upper case** letters?
+3. Would you like **lower case** letters?
+4. Would you like **numbers**?
+5. Would you like **symbols**?
 ## Technologies Used
-    - Javascript - Used to make the web page interactive.
-    - Git - Version control system to track changes to source code.
-    - GitHub - Hosts repositroy that can be deployed to GitHub pages.
-
-## Summary
-    Built the functions of a random password generator that had to meet certain criteria. These functions were all made in Javascript.
-
-
-
-## Code Snippet
-    Here is a snippit from my Javascript where I implemented my generatePassword function.
-
-```javascript
-  function generatePassword() {
-  var maxChar = window.prompt('Between 8-128 how many characters would you like your  password to be?');
-  if (maxChar < 8 || maxChar > 128) {
-    alert('It has to be within 8-128 characters. Try again.');
-    return '';
-
-  }
-  var allVals = '';
-  var upperCaseConfirm = window.confirm('Would you like upper case letters?');
-  if (upperCaseConfirm === true) {
-    allVals = allVals.concat(upperCaseLetters);
-  }
-  var lowerCaseConfirm = window.confirm('Would you like lower case letters?');
-  if (lowerCaseConfirm === true) {
-    allVals = allVals.concat(lowerCaseLetters);
-  }
-  var numberConfirm = window.confirm('Would you like numbers?');
-  if (numberConfirm === true) {
-    allVals = allVals.concat(numberForPassword);
-  }
-  var symbolConfirm = window.confirm('Would you like symbols?');
-  if (symbolConfirm === true) {
-    allVals = allVals.concat(symbolForPassword);
-  }
-  if (allVals === '') {
-    alert('You must select atleast one character type! Try again.');
-    return '';
-```
+- HTML
+- CSS
+- Javascript
 
 ## Author Links
 [LinkedIn](https://www.linkedin.com/in/liamsctewart/)<br>
 [Github](https://github.com/LiamStewart8)<br>
-[Deployed Link](https://liamstewart8.github.io/Password-Generator/)
+[Deployed Link](https://liamstewartdev.github.io/Password-Generator/)

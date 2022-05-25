@@ -26,7 +26,7 @@ function generatePassword() {
   if (numberConfirm === true) {
     allVals = allVals.concat(numberForPassword);
   }
-  var symbolConfirm = window.confirm('Would you like symbols?');
+  var symbolConfirm = window.confirm('Would you like special characters?');
   if (symbolConfirm === true) {
     allVals = allVals.concat(symbolForPassword);
   }
